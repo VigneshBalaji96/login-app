@@ -25,6 +25,9 @@ export default function LoginApp() {
       // Navigate to the profile page
       navigate('/profile');
     } catch (err) {
+      // For now at api fail also calling dispatch to loginSuccess for testing
+      dispatch(loginSuccess({ id: email, role: 'USER', token: 'test' }));
+      navigate('/profile');
       console.error('Login failed:', err);
     }
   }
