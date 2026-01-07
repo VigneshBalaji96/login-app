@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* 👇 VERY IMPORTANT: tell Tailwind where to scan */
+@source "../../../packages/shared-ui/src/**/*.{js,ts,jsx,tsx}";
